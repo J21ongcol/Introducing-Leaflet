@@ -15,12 +15,12 @@ const mappa = new Mappa('Leaflet');
 const options = {
   lat: 49.2606,
   lng: 123.2460,
-  zoom: 2,
+  zoom: 4,
   style: "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}"
 }
 
 function setup(){
-  canvas = createCanvas(660,660);
+  canvas = createCanvas(640,640);
   myMap = mappa.tileMap(options); 
   myMap.overlay(canvas) 
 
@@ -58,8 +58,7 @@ for (let i = 0; i < meteorites.getRowCount(); i++) {
       size = map(size, 558, 60000000, 1, 25) + myMap.zoom();
       ellipse(pos.x, pos.y, size, size);
     }
-  }
-  
+  } 
 }    
   </script>
 </body>
