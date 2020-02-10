@@ -16,7 +16,7 @@ const options = {
   lat: 0,
   lng: 0,
   zoom: 4,
-  style: "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+  style: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
 }
 
 function setup(){
@@ -49,9 +49,9 @@ for (let i = 0; i < meteorites.getRowCount(); i++) {
     // Leaflet method to check if the lat and lng are contain inside the current
     // map. This way we draw just what we are going to see and not everything. See
     // getBounds() in http://leafletjs.com/reference-1.1.0.html
-    if (myMap.map.getBounds().contains({lat: latitude, lng: longitude})) {
+    if (myMap.map.getBounds().contains({lat: 49.2606, lng: 123.2460})) {
       // Transform lat/lng to pixel position
-      const pos = myMap.latLngToPixel(latitude, longitude);
+      const pos = myMap.latLngToPixel(49.2606, 123.2460);
       // Get the size of the meteorite and map it. 60000000 is the mass of the largest
       // meteorite (https://en.wikipedia.org/wiki/Hoba_meteorite)
       let size = meteorites.getString(i, 'mass (g)');
