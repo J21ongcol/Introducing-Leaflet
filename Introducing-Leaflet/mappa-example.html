@@ -16,7 +16,7 @@ const options = {
   lat: 49.2606,
   lng: -123.2460,
   zoom: 3,
-  style: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+  style: "https://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey={apikey}"
 }
 
 function setup(){
@@ -30,7 +30,7 @@ function setup(){
   // Only redraw the point when the map changes and not every frame.
   myMap.onChange(drawMeteorites);
   
-  fill(250,90,100);
+  fill(250,90,90);
   stroke(80);
 }
 
